@@ -1,0 +1,145 @@
+﻿Sheet Name	ObjectID	Object Name	Location	Expression
+Debug	CH02	Debug	Chart Main Expression	=sum(SalesAmount)
+Debug	CH04	Budget and Sales	Chart Main Expression	=sum(Targets)
+Debug	CH04	Budget and Sales	Chart Main Expression	=sum( SalesAmount)
+Debug	CH04	Budget and Sales	Chart Main Expression	=sum( SalesAmount)
+Sales & Budget Analysis	CH05	Sales and Budgets	Chart Main Expression	=sum(Targets)
+Sales & Budget Analysis	CH05	Sales and Budgets	Chart Main Expression	=sum(SalesAmount)
+Sales & Budget Analysis	CH05	Sales and Budgets	Chart Main Expression	=sum(SalesAmount)
+Debug	CH06	ddd	Chart Main Expression	=sum(SalesAmount)
+Debug	CH06	ddd	Chart Main Expression	=sum(Targets)
+Debug	CH06	ddd	Chart Main Expression	=sum(SalesAmount) / sum( Targets) 
+Sales & Budget Analysis	CH07	Sales Trends	Chart Main Expression	=sum(SalesAmount)
+Sales & Budget Analysis	CH07	Sales Trends	Chart Main Expression	=sum(Targets)
+Sales & Budget Analysis	CH07	Sales Trends	Chart Main Expression	=sum(SalesAmount) / sum(Targets)
+Debug	CH101	Categ/SubCateg/Prod Ranking of sales	Chart Main Expression	=rank(sum(UnitCost * UnitsBalance))
+ 
+ //Avg(Aggr(Sum(UnitSales*UnitPrice), Customer))
+Debug	CH101	Categ/SubCateg/Prod Ranking of sales	Chart Main Expression	=sum(UnitCost * UnitsBalance)
+Stock Performance	CH105	Categ/SubCateg/Product SOH $ Value Ranking	Chart Main Expression	=rank(sum(UnitCost * UnitsBalance))
+Stock Performance	CH105	Categ/SubCateg/Product SOH $ Value Ranking	Chart Main Expression	=sum(UnitCost * UnitsBalance)
+Stock Performance	CH106	Stock Product Analysis	Chart Main Expression	=sum(UnitCost * UnitsBalance)
+Stock Performance	CH106	Stock Product Analysis	Chart Main Expression	=sum(UnitsBalance)
+Business Analysis	CH108	Categ/SubCateg/Product Sales $ Value Ranking	Chart Main Expression	=rank(sum(SalesAmount),0,1)
+Business Analysis	CH108	Categ/SubCateg/Product Sales $ Value Ranking	Chart Main Expression	=sum(SalesAmount)
+Sales Comparative Analysis	CH116	Region Sales Performance (Top 20 Comparison)	Chart Main Expression	=sum( {Alpha<CountryRegionName=Common::CountryRegionName>} SalesAmount)
+Sales Comparative Analysis	CH119	State/Province Sales Performance (Top 20 Comparison)	Chart Main Expression	=sum({Alpha<CountryRegionName=Common::CountryRegionName,StateProvinceName=Common::StateProvinceName> } SalesAmount)
+Sales Comparative Analysis	CH121	Region Sales Performance (Top 20 Comparison) : alternate state used Bravo	Chart Main Expression	=sum( {Bravo<CountryRegionName=Common::CountryRegionName>}  SalesAmount)
+Sales Comparative Analysis	CH123	State/Province Sales Performance (Top 20 Products Comparison)	Chart Main Expression	=sum({Alpha<CountryRegionName=Common::CountryRegionName,StateProvinceName=Common::StateProvinceName> } SalesAmount)
+Sales Comparative Analysis	CH125	State/Province Sales Performance (Top 20 Comparison)	Chart Main Expression	=sum({Bravo<CountryRegionName=Common::CountryRegionName,StateProvinceName=Common::StateProvinceName> } SalesAmount)
+Sales Comparative Analysis	CH126	State/Province Sales Performance (Top 20 Products Comparison)	Chart Main Expression	=sum({Bravo<CountryRegionName=Common::CountryRegionName,StateProvinceName=Common::StateProvinceName> } SalesAmount)
+Business Analysis	CH128	Multi Sales Analysis Excl. Freight	Chart Main Expression	=sum(SalesAmount)  
+                                                                        
+
+Business Analysis	CH128	Multi Sales Analysis Excl. Freight	Chart Main Expression	=sum(SalesAmount + Freight)  
+                                                                        
+
+Business Analysis	CH128	Multi Sales Analysis Excl. Freight	Chart Main Expression	=if($(vShowSalesFreightCalc),sum(SalesAmount + Freight),sum(SalesAmount))
+                                                                        
+
+Crosstab	CH130	Traffic	Chart Main Expression	=sum(Traffic)
+Overview	CH134	Sales Trends	Chart Main Expression	=sum(SalesAmount)
+Overview	CH134	Sales Trends	Chart Main Expression	=sum(Targets)
+Overview	CH134	Sales Trends	Chart Main Expression	=sum(SalesAmount) / sum(Targets)
+Overview	CH136	Pricing Impact on Sales - What If 	Chart Main Expression	=sum(SalesAmount)
+Overview	CH136	Pricing Impact on Sales - What If 	Chart Main Expression	=sum(SalesAmount) + ($(vProductPriceCoefficient) * sum(SalesAmount)) 
+Overview	CH136	Pricing Impact on Sales - What If 	Chart Main Expression	=($(vProductPriceCoefficient) * sum(SalesAmount)) 
+Overview	CH137	Categ/SubCateg/Product Sales $ Value Ranking	Chart Main Expression	=rank(sum(SalesAmount),0,1)
+Overview	CH137	Categ/SubCateg/Product Sales $ Value Ranking	Chart Main Expression	=sum(SalesAmount)
+Overview	CH138	Categ/SubCateg/Product Sales $ Value Ranking	Chart Main Expression	=rank(sum(SalesAmount),0,1)
+Overview	CH138	Categ/SubCateg/Product Sales $ Value Ranking	Chart Main Expression	=sum(SalesAmount)
+Overview	CH139	Females	Chart Main Expression	=-1 * count(distinct if(Gender='F', CustomerKey))
+Overview	CH139	Females	Chart Main Expression	=count(distinct if(Gender='F', CustomerKey))
+Overview	CH139	Females	Chart Main Expression	=maxstring(YearlyIncomeGroup)
+Overview	CH140	Males	Chart Main Expression	=count(distinct if(Gender='M', CustomerKey))
+Overview	CH141	SOH$ Special Analysis (Computers and A* Suppliers)	Chart Main Expression	=sum(UnitCost * UnitsBalance)
+Overview	CH143	% Of Target	Chart Main Expression	=sum(SalesAmount) / sum(Targets)
+Debug	CH24	Gender : Females	Chart Main Expression	=-1 * Count(distinct if(Gender='F',  CustomerKey) )
+Debug	CH24	Gender : Females	Chart Main Expression	=Count(distinct if(Gender='F',  CustomerKey))
+Debug	CH26	Males	Chart Main Expression	=Count(distinct if(Gender='M',  CustomerKey) )
+Debug	CH26	Males	Chart Main Expression	=Count(distinct if(Gender='M',  CustomerKey))
+Debug	CH26	Males	Chart Main Expression	=MaxString(YearlyIncomeGroup)
+Sales & Budget Analysis	CH30	Males	Chart Main Expression	=count(distinct if(Gender='M', CustomerKey))
+Debug	CH37	Sales Amount	Chart Main Expression	=Sum ([SalesAmount])
+Debug	CH37	Sales Amount	Chart Main Expression	=Sum ([OrderQuantity])
+Debug	CH37	Sales Amount	Chart Main Expression	=sum(SalesAmount) - sum(ProductStandardCost)
+Debug	CH40	Sales Amount	Chart Main Expression	=sum ([SalesAmount])
+Debug	CH40	Sales Amount	Chart Main Expression	=sum ([OrderQuantity])
+Debug	CH40	Sales Amount	Chart Main Expression	=sum(SalesAmount) - sum(ProductStandardCost)
+Debug	CH41	% Of Target	Chart Main Expression	=sum(SalesAmount) / sum(Targets)
+Debug	CH42	Kids @ Home Analysis	Chart Main Expression	=count(DISTINCT CustomerKey)
+Debug	CH42	Kids @ Home Analysis	Chart Main Expression	=sum(SalesAmount) / sum(TOTAL SalesAmount)
+Debug	CH42	Kids @ Home Analysis	Chart Main Expression	=(sum(SalesAmount)- sum(TotalProductCost)) / sum(SalesAmount)
+Sales & Budget Analysis	CH44	Yearly Income Group Sales 	Chart Main Expression	=Sum ([SalesAmount])
+Sales & Budget Analysis	CH44	Yearly Income Group Sales 	Chart Main Expression	=Sum ([OrderQuantity])
+Sales & Budget Analysis	CH44	Yearly Income Group Sales 	Chart Main Expression	=sum(SalesAmount) - sum(ProductStandardCost) 
+Sales & Budget Analysis	CH46	Kids At Home Groups Analysis	Chart Main Expression	=count(DISTINCT CustomerKey)
+Sales & Budget Analysis	CH46	Kids At Home Groups Analysis	Chart Main Expression	=(sum(SalesAmount) - sum(ProductStandardCost)) / sum(SalesAmount)
+Sales & Budget Analysis	CH47	Kids At Home Sales	Chart Main Expression	=Sum ([SalesAmount])
+Sales & Budget Analysis	CH47	Kids At Home Sales	Chart Main Expression	=Sum ([OrderQuantity])
+Sales & Budget Analysis	CH47	Kids At Home Sales	Chart Main Expression	=sum(SalesAmount) - sum(ProductStandardCost) 
+Sales & Budget Analysis	CH48	% Of Target	Chart Main Expression	=sum(SalesAmount) / sum(Targets)
+Sales / Currency Impact Analysis	CH49	Geo Local Sales Value	Chart Main Expression	=sum(SalesAmount) 
+Sales / Currency Impact Analysis	CH49	Geo Local Sales Value	Chart Main Expression	=sum(SalesAmount * EndOfDayRate)
+Debug	CH50	Set Analysis Training	Chart Main Expression	=sum( {$ <ProductCategoryName={'Audio'} > } SalesAmount )
+Debug	CH50	Set Analysis Training	Chart Main Expression	=sum( {$1 <ProductCategoryName={'Audio'} > } SalesAmount )
+
+Debug	CH50	Set Analysis Training	Chart Main Expression	=sum( {$_1 <ProductCategoryName={'Audio'} > } SalesAmount )
+
+Business Analysis	CH52	Sales Analysis using Set Analysis Dates - Month To Date	Chart Main Expression	=sum( {$ <YearNum={2016},MonthNum={12} > }   SalesAmount)  
+
+
+Business Analysis	CH52	Sales Analysis using Set Analysis Dates - Month To Date	Chart Main Expression	=sum( {$ <OrderDate={'$(=Today())'}> }   SalesAmount)  
+
+
+Business Analysis	CH52	Sales Analysis using Set Analysis Dates - Month To Date	Chart Main Expression	=sum( {$ <YearNum,MonthAbbr,OrderDate={  '>=$(=MonthStart(Today())) <=$(=max(OrderDate))'}> }   SalesAmount)  
+
+
+Business Analysis	CH52	Sales Analysis using Set Analysis Dates - Month To Date	Chart Main Expression	=sum( {$ <OrderDate={">=$(=MonthStart(Today())) <=$(=max(OrderDate))"}> }   SalesAmount)  
+
+
+Debug	CH53	Test $	Chart Main Expression	=sum(SalesAmount)
+Debug	CH55	Sales Analysis using Set Analysis Dates - Month To Date	Chart Main Expression	=sum( {1<OrderDate={'>=$(=MonthStart(Min(OrderDate))) <=$(=MonthEnd(AddMonths(Min(OrderDate),2)))'}> }   SalesAmount)  
+
+
+Debug	CH58	Sales	Chart Main Expression	= avg(aggr(sum(SalesAmount), ProductName))
+ 
+ //Avg(Aggr(Sum(UnitSales*UnitPrice), Customer))
+Debug	CH61	Sales Analysis using Set Analysis Dates - Month To Date	Chart Main Expression	=Sum({$<MonthAbbr={'>=$(=max(MonthAbbr)-2) <=$(=Max(MonthAbbr))'}>} SalesAmount) 
+Debug	CH62	Sales Analysis using Set Analysis Dates - Month To Date	Chart Main Expression	=Sum({$<YearNum=,MonthAbbr={'>=$(=max(num(MonthAbbr))-2) <=$(=Max(num(MonthAbbr)))'}>} SalesAmount) 
+Debug	CH63	Categ/SubCateg/Prod Ranking of sales	Chart Main Expression	= rank(sum(SalesAmount))
+ 
+ //Avg(Aggr(Sum(UnitSales*UnitPrice), Customer))
+Debug	CH63	Categ/SubCateg/Prod Ranking of sales	Chart Main Expression	=sum(SalesAmount)
+Debug	CH65	Top 10 Products	Chart Main Expression	=sum(OrderQuantity)
+Debug	CH65	Top 10 Products	Chart Main Expression	=sum(SalesAmount)
+Debug	CH65	Top 10 Products	Chart Main Expression	=sum(SalesAmount) - sum(ProductStandardCost)
+Debug	CH65	Top 10 Products	Chart Main Expression	=Avg(SalesAmount)
+Debug	CH65	Top 10 Products	Chart Main Expression	=Sum(ProductStandardCost)
+Debug	CH65	Top 10 Products	Chart Main Expression	=max(ProductStandardCost)
+Debug	CH66	Categ/SubCateg/Prod Ranking of sales	Chart Main Expression	=sum(SalesAmount)
+Debug	CH67	Sales Analysis using Set Analysis Dates - Month To Date	Chart Main Expression	=Sum({$<YearNum=,MonthAbbr={'>=$(=max(num(MonthAbbr))-2) <=$(=Max(num(MonthAbbr)))'}>} SalesAmount) 
+Business Analysis	CH75	Sales Analysis using Set Analysis Dates - Year To Date	Chart Main Expression	=sum( {$ <MonthAbbr=,YearNum={'$(=max(YearNum))'}> } SalesAmount)  
+
+
+Business Analysis	CH82	Sales Analysis using Set Analysis Dates - Rolling 3 Months	Chart Main Expression	=sum( {$ <MonthAbbr={'>=$(=Max(MonthAbbr)-2) <=$(=max(MonthAbbr))'}    > } SalesAmount)  
+
+
+Business Analysis	CH85	Sales Analysis using Set Analysis Dates - Previous Month	Chart Main Expression	=sum( {$ <YearNum=,MonthAbbr=,DisplayDate={'>=$(=Monthstart(Addmonths(max(DisplayDate),-1))) <=$(=MonthEnd(Addmonths(max(DisplayDate),-1)))'  }   > } SalesAmount)  
+                                                                        
+
+Business Analysis	CH86	Sales Analysis using Set Analysis Dates - Previous Year To Date	Chart Main Expression	=sum( {$ <MonthAbbr=,YearNum={"$(=max(YearNum)-1)"}> } SalesAmount)  
+                                                                        
+
+Sales & Budget Analysis	CH87	Females	Chart Main Expression	=-1 * count(distinct if(Gender='F', CustomerKey))
+Sales & Budget Analysis	CH87	Females	Chart Main Expression	=count(distinct if(Gender='F', CustomerKey))
+Sales & Budget Analysis	CH87	Females	Chart Main Expression	=maxstring(YearlyIncomeGroup)
+Stock Performance	CH88	Stock On Hand Value $	Chart Main Expression	=sum(UnitCost * UnitsBalance)
+Stock Performance	CH88	Stock On Hand Value $	Chart Main Expression	=sum(UnitCost * UnitsBalance) + ($(vProductCostCoefficient) *  sum(UnitCost * UnitsBalance))
+Stock Performance	CH88	Stock On Hand Value $	Chart Main Expression	=($(vProductCostCoefficient) *  sum(UnitCost * UnitsBalance))
+What If Analysis	CH95	Pricing Impact on Sales - What If 	Chart Main Expression	=sum(SalesAmount)
+What If Analysis	CH95	Pricing Impact on Sales - What If 	Chart Main Expression	=sum(SalesAmount) + ($(vProductPriceCoefficient) * sum(SalesAmount)) 
+What If Analysis	CH95	Pricing Impact on Sales - What If 	Chart Main Expression	=($(vProductPriceCoefficient) * sum(SalesAmount)) 
+Stock Performance	CH99	SOH$ Special Analysis	Chart Main Expression	=sum(UnitCost * UnitsBalance)
+Sales & Budget Analysis	YIGA1	Yearly Income Groups Analysis	Chart Main Expression	=count(DISTINCT CustomerKey)
+Sales & Budget Analysis	YIGA1	Yearly Income Groups Analysis	Chart Main Expression	=sum(SalesAmount) / sum(TOTAL SalesAmount)
